@@ -1,0 +1,37 @@
+.sidebar{
+    width:240px;
+    height:100%;
+    background:rgb(28, 28, 59);
+    flex-shrink: 0;
+    overflow-y: auto;
+}
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;       
+  gap: 2px;
+  padding: 16px 12px;
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #94a1c4;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;        /* removes the default underline on links */
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.sidebar-link:hover {
+  background: #1a2140;
+  color: #ffffff;
+}
+.sidebar-link.active {
+  background: #6366f1;
+  color: #ffffff;
+}
+.sidebar-divider {
+  height: 1px;
+  background: #1f2745;
+  margin: 12px 4px;
+}
