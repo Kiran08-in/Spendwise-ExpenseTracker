@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+[data-theme="dark"] {
+  --bg-page: #0f172a;
+  --card-bg: #1e293b;
+  --text-dark: #f1f5f9;
+  --border: #334155;
+}
+
+[data-theme="dark"] body {
+  background: var(--bg-page);
+  color: var(--text-dark);
+}

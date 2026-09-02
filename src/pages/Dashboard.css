@@ -2,18 +2,18 @@
   padding: 4px;
 }
 
-.page-header {
+.dashboard-page-header {
   margin-bottom: 24px;
 }
 
-.page-header h1 {
+.dashboard-page-header h1 {
   font-size: 22px;
   font-weight: 700;
   color: #171b2e;
   margin: 0 0 4px;
 }
 
-.page-header p {
+.dashboard-page-header p {
   font-size: 14px;
   color: #6b7280;
   margin: 0;

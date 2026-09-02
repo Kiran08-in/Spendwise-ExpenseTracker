@@ -51,7 +51,7 @@ function Dashboard({ transactions, addTransaction }) {
 
   return (
     <div className="dashboard-page">
-      <div className="page-header">
+      <div className="dashboard-page-header">
         <h1>Dashboard</h1>
         <p>Welcome back</p>
       </div>

@@ -3,7 +3,12 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
-import Transactions from './pages/Transactions';
+import Income from './pages/Income';
+import Expenses from './pages/Expenses';
+import Categories from './pages/Categories';
+import Reports from './pages/Reports';
+import Budget from './pages/Budget';
+import Setting from './pages/Setting';
 import './App.css';
 
 function App() {
@@ -17,6 +22,12 @@ function App() {
       { id: 5, title: "Electricity Bill", category: "Bills", type: "expense", amount: 1150, date: "2025-05-26" },
     ];
   });
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
+
+useEffect(() => {
+  document.body.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+}, [theme]);
 
   useEffect(() => {
     localStorage.setItem('transactions', JSON.stringify(transactions));
@@ -38,7 +49,13 @@ function App() {
         <main className="page">
           <Routes>
             <Route path="/" element={<Dashboard transactions={transactions} addTransaction={addTransaction} />} />
-            <Route path="/transactions" element={<Transactions transactions={transactions} deleteTransaction={deleteTransaction} />} />
+            <Route path="/income" element={<Income transactions={transactions} />} />
+            <Route path="/income" element={<Income transactions={transactions} deleteTransaction={deleteTransaction} />} />
+            <Route path="/expenses" element={<Expenses transactions={transactions} deleteTransaction={deleteTransaction} />} />
+            <Route path="/categories" element={<Categories transactions={transactions} />} />
+            <Route path="/reports" element={<Reports transactions={transactions} />} />
+            <Route path="/budget" element={<Budget transactions={transactions} />} />
+            <Route path="/setting" element={<Setting theme={theme} setTheme={setTheme} />} />
           </Routes>
         </main>
       </div>

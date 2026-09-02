@@ -1,0 +1,89 @@
+.income-page {
+  padding: 4px;
+}
+
+.income-page-header {
+  margin-bottom: 20px;
+}
+
+.income-page-header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.income-page-header p {
+  font-size: 14px;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.income-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.income-table th {
+  text-align: left;
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.income-table td {
+  padding: 12px 16px;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f2f6;
+}
+
+.amount-income {
+  color: #16a34a;
+  font-weight: 600;
+}
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  width: 240px;
+}
+
+.expenses-table, .income-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.expenses-table th, .income-table th {
+  text-align: left;
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.expenses-table td, .income-table td {
+  padding: 12px 16px;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f2f6;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}

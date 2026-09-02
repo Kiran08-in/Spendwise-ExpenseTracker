@@ -9,9 +9,6 @@ function Sidebar() {
                     <NavLink to="/" className="sidebar-link">
                         Dashboard
                     </NavLink>
-                    <NavLink to="/transactions" className="sidebar-link">
-                        Transactions
-                    </NavLink>
                      <NavLink to="/income" className="sidebar-link">
                         Income
                     </NavLink>
