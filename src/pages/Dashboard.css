@@ -114,3 +114,15 @@
 .recent-row:last-child {
   border-bottom: none;
 }
+.category-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}

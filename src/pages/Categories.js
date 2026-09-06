@@ -1,5 +1,7 @@
 import './Categories.css';
 
+const COLORS = ["#f97316", "#3b82f6", "#ec4899", "#22c55e", "#a855f7", "#ef4444"];
+
 function Categories({ transactions }) {
   const categoryTotals = transactions
     .filter((t) => t.type === "expense")
@@ -22,8 +24,11 @@ function Categories({ transactions }) {
       </div>
 
       <div className="categories-grid">
-        {categoryTotals.map((cat) => (
+        {categoryTotals.map((cat, i) => (
           <div key={cat.name} className="category-card">
+            <div className="category-icon" style={{ background: COLORS[i % COLORS.length] }}>
+              {cat.name[0]}
+            </div>
             <h3>{cat.name}</h3>
             <p className="category-total">₹{cat.total.toLocaleString()}</p>
             <p className="category-count">{cat.count} transaction{cat.count !== 1 ? 's' : ''}</p>

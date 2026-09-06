@@ -87,3 +87,9 @@
   font-weight: 500;
   cursor: pointer;
 }
+.expenses-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}

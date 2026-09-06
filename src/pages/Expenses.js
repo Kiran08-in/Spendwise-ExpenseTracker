@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import StatCard from '../components/StatCard';
 import './Expenses.css';
 
 function Expenses({ transactions, deleteTransaction }) {
@@ -10,11 +11,33 @@ function Expenses({ transactions, deleteTransaction }) {
 
   const totalExpense = expenseTransactions.reduce((sum, t) => sum + t.amount, 0);
 
+  const thisMonth = new Date().toISOString().slice(0, 7);
+  const thisMonthTotal = expenseTransactions
+    .filter((t) => t.date.startsWith(thisMonth))
+    .reduce((sum, t) => sum + t.amount, 0);
+
+  const highest = expenseTransactions.reduce(
+    (max, t) => (t.amount > (max?.amount || 0) ? t : max), null
+  );
+
+  const stats = [
+    { label: "Total Expenses", value: totalExpense },
+    { label: "This Month", value: thisMonthTotal },
+    { label: "Highest Expense", value: highest?.amount || 0 },
+    { label: "Total Transactions", value: expenseTransactions.length },
+  ];
+
   return (
     <div className="expenses-page">
       <div className="page-header">
         <h1>Expenses</h1>
-        <p>Total expenses: ₹{totalExpense.toLocaleString()}</p>
+        <p>Track all your expenses</p>
+      </div>
+
+      <div className="expenses-stats">
+        {stats.map((s) => (
+          <StatCard key={s.label} label={s.label} value={s.value} />
+        ))}
       </div>
 
       <input
